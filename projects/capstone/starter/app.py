@@ -12,7 +12,7 @@ from flask_session import Session
 from authlib.integrations.flask_client import OAuth
 # from authlib.flask.client import OAuth
 from six.moves.urllib.parse import urlencode
-import constants
+# import constants
 
 
 # AUTH0_CALLBACK_URL = AUTH0_CALLBACK_URL
@@ -83,7 +83,7 @@ def create_app(test_config=None):
     @app.route('/login')
     def login():
     	
-    	return auth0.authorize_redirect(redirect_uri='https://jay-capstone-app.herokuapp.com/callback', audience='castagency', response_type='token', state='')
+    	return auth0.authorize_redirect(redirect_uri='https://shielded-cliffs-19754.herokuapp.com/callback', audience='castagency', response_type='token', state='')
 
 
     # Here we're using the /callback route.
